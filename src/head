@@ -1,0 +1,16 @@
+# AgentForwarding is dangerous. Only use it between secure computers that *you alone* have root on.
+# Instead, use ProxyCommand (and optionally, ControlMaster)
+# https://lyte.id.au/2012/03/19/ssh-agent-forwarding-is-a-bug/
+# https://heipei.github.io/2015/02/26/SSH-Agent-Forwarding-considered-harmful/
+ForwardAgent no
+
+# Opportunistically use ControlMaster multiplexing for *all* hosts.
+# No downsides worth mentioning.
+Host *
+	ControlMaster auto
+	ControlPersist yes
+	ControlPath /tmp/%r@%h:%p
+
+
+############ Hosts
+

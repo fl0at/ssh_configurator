@@ -1,0 +1,3 @@
+Host example.com
+	User foo
+	IdentityFile ~/.ssh/keys/id_foo

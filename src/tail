@@ -1,0 +1,6 @@
+
+# Disable offering of identity files! There are too many creepy ways to use them against you!
+# https://blog.filippo.io/ssh-whoami-filippo-io/
+# https://news.ycombinator.com/item?id=10004678
+Host *
+IdentitiesOnly yes

@@ -1,5 +1,7 @@
-# AgentForwarding is dangerous. Only use it between secure computers that *you alone* have root on.
-# Instead, use ProxyCommand (and optionally, ControlMaster)
+# Agent forwarding is dangerous, since it can allow for temporary impersonation.
+# Only use it between secure computers that *you alone* have root on, if at all.
+# Instead, use ProxyCommand.
+#
 # https://lyte.id.au/2012/03/19/ssh-agent-forwarding-is-a-bug/
 # https://heipei.github.io/2015/02/26/SSH-Agent-Forwarding-considered-harmful/
 ForwardAgent no

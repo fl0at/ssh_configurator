@@ -11,6 +11,3 @@ Host *
 	ControlPersist yes
 	ControlPath ~/.ssh/tmp/%r@%h:%p.sock
 
-
-############ Hosts
-

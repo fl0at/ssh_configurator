@@ -6,6 +6,10 @@
 # https://heipei.github.io/2015/02/26/SSH-Agent-Forwarding-considered-harmful/
 ForwardAgent no
 
+# A unused but implemented client option allows for remotely-exploitable memory leaks that could compromise private keys!
+# OpenSSH clients from 5.4 to 7.1 are affected. See CVE-2016-0778, CVE-2016-0777, and http://www.openssh.com/txt/release-7.1p2 for more information.
+UseRoaming no
+
 # Opportunistically use ControlMaster multiplexing for *all* hosts.
 # No downsides worth mentioning.
 Host *

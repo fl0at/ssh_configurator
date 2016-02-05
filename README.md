@@ -16,10 +16,17 @@ You can invoke it manually, stuff it in your crontab, or use hooks from your VCS
 
 It's pretty easy. Read on.
 
-### Initial setup
-* You must modify the files in `src/`: the warning banner, header, hosts and tail of the end-result `config` file. They're a bit opinionated!
+### Installation
+
+`git pull https://github.com/fl0at/ssh_configurator.git`
+
+* You must modify the files in `src/`: the warning banner, header, hosts and tail of the end-result `config` file.
+** They're a bit opinionated! ;)
 * *OPTIONAL:* Add any additional files into the Rakefile
 * *OPTIONAL:* Put your keys into `~/.ssh/keys` for cleanliness
+* `rake`
+
+Once you're happy with the resulting `config`, move everything into your real `~/.ssh` and enjoy.
 
 ### Day-to-day usage
 

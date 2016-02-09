@@ -1,23 +1,7 @@
-# Agent forwarding is dangerous, since it can allow for temporary impersonation.
-# Only use it between secure computers that *you alone* have root on, if at all.
-# Instead, use ProxyCommand.
-#
-# https://lyte.id.au/2012/03/19/ssh-agent-forwarding-is-a-bug/
-# https://heipei.github.io/2015/02/26/SSH-Agent-Forwarding-considered-harmful/
-ForwardAgent no
+### Remember, ssh_config uses the *first* specified option for a matching host field.
+#   So it's best to have generally-applicable options at the end, lest you override host-specific options...
 
-# A unused but implemented client option allows for remotely-exploitable memory leaks that could compromise private keys!
+# A default-enabled client option, for which server support was never implemented, allows for remotely-exploitable memory leaks that could compromise private keys!
 # OpenSSH clients from 5.4 to 7.1 are affected. See CVE-2016-0778, CVE-2016-0777, and http://www.openssh.com/txt/release-7.1p2 for more information.
 UseRoaming no
-
-# Opportunistically use ControlMaster multiplexing for *all* hosts.
-# No downsides worth mentioning.
-Host *
-	ControlMaster auto
-	ControlPersist yes
-	ControlPath ~/.ssh/tmp/%r@%h:%p.sock
-	#@@@ Alternative ControlPath: instead of plaintext variables, use a hash of them.
-	# Good if you like obfuscation, or hit path length limits due to giant hostnames/usernames.
-	## Only works in OpenSSH >= 6.7
-	#ControlPath ~/.ssh/tmp/%C.sock
 

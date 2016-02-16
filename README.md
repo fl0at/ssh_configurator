@@ -24,7 +24,7 @@ It's pretty easy. Read on.
 
 * You should probably read the files in `src` that combine into your desired `config`: the warning banner, header, hosts and tail.
   * They're a bit opinionated! ;)
-* `rake`
+* `rake`, or `make`.
 
 Once you're happy with the resulting `config`, you can move everything into your real `~/.ssh` and enjoy.
 

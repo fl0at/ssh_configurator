@@ -1,3 +1,4 @@
+################################## Defaults ##################################
 
 Host *
 	# Agent forwarding is dangerous, since it can allow for temporary impersonation.
@@ -22,3 +23,4 @@ Host *
 	# Good if you like obfuscation, or hit path length limits due to giant hostnames/usernames.
 	## Only works in OpenSSH >= 6.7
 	#ControlPath ~/.ssh/tmp/%C.sock
+

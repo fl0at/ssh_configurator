@@ -14,7 +14,7 @@ Host *
 	IdentitiesOnly yes
 
 	# Opportunistically use ControlMaster multiplexing for *all* hosts.
-	# No downsides worth mentioning.
+	# No real downsides, but you might prefer to disable this when forwarding ports.
 	ControlMaster auto
 	ControlPersist yes
 	ControlPath ~/.ssh/tmp/%r@%h:%p.sock

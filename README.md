@@ -20,10 +20,10 @@ It's pretty easy. Read on.
 
 `git pull https://github.com/fl0at/ssh_configurator.git`
 
-* You must modify the files in `src/`: the warning banner, header, hosts and tail of the end-result `config` file.
-** They're a bit opinionated! ;)
+* You must modify the files in `src/` that turn into your desired `config` end-result: the warning banner, header, hosts and tail.
+  * They're a bit opinionated! ;)
 * *OPTIONAL:* Add any additional files into the Rakefile
-* *OPTIONAL:* Put your keys into `~/.ssh/keys` for cleanliness
+* *OPTIONAL:* Move your existing keys into `~/.ssh/keys` for cleanliness
 * `rake`
 
 Once you're happy with the resulting `config`, move everything into your real `~/.ssh` and enjoy.
@@ -34,11 +34,11 @@ Once you're happy with the resulting `config`, move everything into your real `~
 
 That's it!
 
-If any of your source files changed, you'll get a shiny new `~/.ssh/config`. Otherwise, no time will be wasted. Science!©
+If any of your source files have changed, you'll get a shiny new `~/.ssh/config`. Otherwise, no time will be wasted. Science!©
 
 #### Automating it
 
-You can write up git hooks around something like `git diff "HEAD@{1}" --name-only | grep -q "$FILE"` to warn when your desired file or files change.
+You can write up git hooks around something like `git diff "HEAD@{1}" --name-only | grep -q "$FILE"` to warn when your desired file or files change.  
 Other VCSes will likely have similar commands available. PRs welcome!
 
 You can also use `crontab` but that seems silly to me. Still, it takes all sorts!

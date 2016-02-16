@@ -3,10 +3,13 @@ config
 authorized_keys
 known_hosts
 id_*
+*.pub
+*.pem
+*.ppk
 rc
 identity
 environment
 
 # New locations from ssh_configurator:
-keys/*
-tmp/*
+keys/**
+tmp/**

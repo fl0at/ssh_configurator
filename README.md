@@ -1,10 +1,14 @@
+# DEPRECATION NOTICE
+
+OpenSSH 7.3p1 (circa 2016-08-01) finally added an `Include` directive, so this project is limited in utility unless you truly need Rakefiles to assemble complex ssh\_config rules.
+
 # SSH Config Generator
 
 ## Why does this exist?
 
 Yeah, why _does_ this exist!?
 
-`ssh_config`'s flexibilty begs for rich, multipurpose complexity, but unfortunately it doesn't provide tools to manage it. You're either forced to manage multiple, entirely distinct files and make sure to invoke them properly on the commandline, or resign yourself to monolithic convolution.
+`ssh_config`'s flexibilty begs for rich, multipurpose complexity, but unfortunately it didn't provide tools to manage it. You're either forced to manage multiple, entirely distinct files and make sure to invoke them properly on the commandline, or resign yourself to monolithic convolution.
 
 So if you have an enormous piles of hosts to manage (Vagrant, Ansible, etc), especially if they're managed elsewhere (a Git repo, perhaps), you'll find that it's quite a burden... until now!
 
